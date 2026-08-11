@@ -1,14 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cloud Computing Lab</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef6ff, #f8fbff);
+            color: #172033;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5eaf2;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-text {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Main Hero Section */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 30px 70px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: #dbeafe;
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* Cards */
+        .cards {
+            max-width: 1000px;
+            margin: 20px auto 80px;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid #e5eaf2;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* CTA */
+        .cta {
+            max-width: 940px;
+            margin: 0 auto 80px;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+        }
+
+        .cta h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #dbeafe;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.04);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #e5eaf2;
+            color: #94a3b8;
+            font-size: 14px;
+            background: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 18px 6%;
+            }
+
+            .nav-text {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 25px 50px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                padding: 0 25px;
+            }
+
+            .cta {
+                margin: 0 25px 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Welcome to Cloud Computing Lab</h1>
-    <h2>Platform as a Service (PaaS)</h2>
-    <p>This website is deployed using GitHub Pages.</p>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">☁ Cloud Lab</div>
+        <div class="nav-text">Cloud Computing Department</div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="badge">
+            Cloud Computing Lab
+        </div>
+
+        <h1>
+            Explore the World of<br>
+            <span>Cloud Computing</span>
+        </h1>
+
+        <p>
+            Welcome to our Cloud Computing Laboratory.
+            Learn, experiment, and build modern cloud-based
+            applications using today's technologies.
+        </p>
+
+    </section>
+
+
+    <!-- Information Cards -->
+    <section class="cards">
+
+        <div class="card">
+
+            <div class="icon">☁</div>
+
+            <h2>Cloud Computing</h2>
+
+            <p>
+                Understand how cloud platforms provide
+                scalable, reliable, and flexible computing
+                resources over the internet.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚙</div>
+
+            <h2>Platform as a Service</h2>
+
+            <p>
+                Learn how PaaS allows developers to build,
+                deploy, and manage applications without
+                worrying about underlying infrastructure.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🚀</div>
+
+            <h2>GitHub Pages</h2>
+
+            <p>
+                This website is deployed using GitHub Pages,
+                demonstrating a simple example of cloud-based
+                web hosting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+    <section class="cta">
+
+        <h2>Start Exploring Cloud Technology</h2>
+
+        <p>
+            Learn the concepts. Build projects. Deploy to the cloud.
+        </p>
+
+        <a href="https://pages.github.com/" class="button">
+            Learn More
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Cloud Computing Lab · Built with HTML & CSS
+    </footer>
+
 </body>
 
 </html>
